@@ -23,55 +23,41 @@
     <title>Weather App</title>
   </head>
 
-  <div class="body1">
-    <header>
-      <div class="navbar">
-        <div class="logo">
-          <i class="ri-cloud-line"></i
-          ><a href="index.html"><span>Weather App</span></a>
+  <body>
+    <div class="body1">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <i class="ri-cloud-line"></i
+            ><a href="index.html"><span>Weather App</span></a>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+          <a href="weather.html" class="action_btn">Get Started</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
-        <ul class="links">
+
+        <div class="dropdown_menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="weather.html">Weather</a></li>
           <li><a href="team.html">Our Team</a></li>
-        </ul>
-        <a href="weather.html" class="action_btn">Get Started</a>
-        <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>
+          <li><a href="weather.html" class="action_btn">Get Started</a></li>
         </div>
-      </div>
+      </header>
 
-      <div class="dropdown_menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="weather.html">Weather</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="weather.html" class="action_btn">Get Started</a></li>
-      </div>
-    </header>
+      <main>
+        <section id="home">
+          <h1>Welcome</h1>
+          <p>Weather Application by Team 2 Khatulistiwa</p>
+        </section>
+      </main>
+    </div>
 
-    <main>
-      <section id="home">
-        <h1>Welcome</h1>
-        <p>Weather Application by Team 2 Khatulistiwa</p>
-      </section>
-    </main>
-
-    <script>
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const DropDownMenu = document.querySelector(".dropdown_menu");
-
-      toggleBtn.onclick = function () {
-        DropDownMenu.classList.toggle("open");
-        const isOpen = DropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-    </script>
-  </div>
-  <body>
     <div class="content">
       <section class="Introduction-website">
         <h1 class="f-judul">Team 2's Weather Application</h1>
@@ -85,6 +71,7 @@
             style="width: 130px; height: 130px"
           />
         </div>
+        <br />
         <div class="explain-paragraph1">
           <p>
             Our weather application will provide you an accurate and real-time
@@ -100,8 +87,6 @@
         <div>
           <h2 class="f-judul2">What can our weather application do for you?</h2>
         </div>
-        <br />
-        <br />
         <div class="thought-logo">
           <img
             src="https://cdn-icons-png.flaticon.com/512/7829/7829928.png"
@@ -144,6 +129,20 @@
         </div>
       </section>
     </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const DropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        DropDownMenu.classList.toggle("open");
+        const isOpen = DropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
   </body>
   <footer>
     <div class="footer-bottom">

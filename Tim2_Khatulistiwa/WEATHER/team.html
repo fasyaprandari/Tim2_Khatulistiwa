@@ -21,32 +21,32 @@
       rel="stylesheet"
     />
   </head>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <i class="ri-cloud-line"></i
-        ><a href="index.html"><span>Weather App</span></a>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <i class="ri-cloud-line"></i
+          ><a href="index.html"><span>Weather App</span></a>
+        </div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="weather.html">Weather</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+        <a href="weather.html" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
-      <ul class="links">
+
+      <div class="dropdown_menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="weather.html">Weather</a></li>
         <li><a href="team.html">Our Team</a></li>
-      </ul>
-      <a href="weather.html" class="action_btn">Get Started</a>
-      <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
+        <li><a href="weather.html" class="action_btn">Get Started</a></li>
       </div>
-    </div>
-
-    <div class="dropdown_menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="weather.html">Weather</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="weather.html" class="action_btn">Get Started</a></li>
-    </div>
-  </header>
-  <br />
-  <body>
+    </header>
+    <br />
     <section class="content">
       <h1 class="f-judul">Our Team</h1>
 
@@ -163,6 +163,20 @@
         >
       </div>
     </section>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const DropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        DropDownMenu.classList.toggle("open");
+        const isOpen = DropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
   </body>
   <footer>
     <div class="footer-bottom">
