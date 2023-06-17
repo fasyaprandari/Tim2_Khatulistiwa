@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+  <link rel="stylesheet" href="css/w.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>Weather App</title>
+</head>
+
+<body>
+
+  <div class="body1">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <i class="ri-cloud-line"></i><a href="index.html"><span>Weather App</span></a>
+        </div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="weather.html">Weather</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+        <a href="weather.html" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="weather.html" class="action_btn">Get Started</a></li>
+      </div>
+    </header>
+
+    <br>
+
+    <div class="container">
+      <br>
+      <div id="mainContainer">
+        <div id="right">
+          <div id="rightOne">
+            <div id="loc">
+              <i id="log" class="fas fa-map-marker-alt"></i>
+              <p id="cityName">Jakarta</p>
+            </div>
+            <div> <i class="fas fa-cloud-sun-rain"></i></div>
+            <div id="sel"><span id="temp">32</span>&#176;C</div>
+            <!-- <div id="Rightdate" class="Rightdate">Thursday, 15 June </div> -->
+          </div>
+        </div>
+
+        <div id="left">
+          <input type="text" id="city" placeholder="Please Enter a name city">
+          <button id="Search" onclick="getWeather()">Search</button>
+
+          <div id="leftOne">
+            <div id="timeDiv">
+              <div id="time" class="time">
+                10:35 <span id="ampm">AM</span>
+              </div>
+              <div id="date" class="date">
+                Thursday, 15 July
+              </div>
+            </div>
+
+            <div id="btns">
+              <button id="night" onclick="nightTheme()">Night</button>
+              <button id="day" onclick="dayTheme()">Day</button>
+            </div>
+          </div>
+
+          <br><br>
+
+          <div id="days">
+            <div>
+              <p>Sun</p>
+              <i class="fas fa-cloud-sun-rain"></i>
+              <div>Max-33&#176;C</div>
+              <div>Min-23&#176;C</div>
+            </div>
+            <div>
+              <p>Mon</p>
+              <i class="fas fa-bolt"></i>
+              <div>Max-34&#176;C</div>
+              <div>Min-23&#176;C</div>
+            </div>
+            <div>
+              <p>Tue</p>
+              <i class="fas fa-cloud-moon"></i>
+              <div>Max-29&#176;C</div>
+              <div>Min-23&#176;C</div>
+            </div>
+            <div>
+              <p>Wed</p>
+              <i class="fas fa-cloud"></i>
+              <div>Max-36&#176;C</div>
+              <div>Min-25&#176;C</div>
+            </div>
+            <div>
+              <p>Thur</p>
+              <i class="fas fa-cloud-sun-rain"></i>
+              <div>Max-32&#176;C</div>
+              <div>Min-29&#176;C</div>
+            </div>
+            <div>
+              <p>Fri</p>
+              <i class="fas fa-bolt"></i>
+              <div>Max-33&#176;C</div>
+              <div>Min-30&#176;C</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <section class="section-flex">
+        <div>
+          <h2>Let's find out more!</h2>
+          <iframe width="700" height="345" src="https://www.youtube.com/embed/RI6osTlcyFc">
+          </iframe>
+        </div>
+    </div>
+    </section>
+  </div>
+  <div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./index.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const DropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      DropDownMenu.classList.toggle('open')
+      const isOpen = DropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+  <footer>
+    <div class="footer-bottom">
+      <p>Copyright 2023 by Team 2 for RevoU Kampus Merdeka Program</p>
+    </div>
+  </footer>
+</body>
+
+</html>
