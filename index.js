@@ -2,10 +2,14 @@
 let key = "ba98deab6ce9cd74af9735fb0625c520";
 let city = "Jakarta";
 let container = document.getElementById("container");
-
+let isChanged = false
 async function getWeather() {
         city = document.getElementById('city').value;
-        
+        if (!isChanged) {
+            city="Jakarta"
+        }
+
+        isChanged=true
         if (city === "") {
         alert("Please enter a valid city name.");
         return;
@@ -81,11 +85,11 @@ function appendsData(data) {
                 img.setAttribute("id", "icon");
 
                 let dayCal = document.createElement("div");
-                dayCal.innerText = "Max-" + Data.daily[i].temp.max;
+                dayCal.innerText = "Max " + Data.daily[i].temp.max + "°C";
                 dayCal.setAttribute("id", "cals");
                 let nightCal = document.createElement("div");
                 nightCal.setAttribute("id", "Ncals");
-                nightCal.innerText = "Min-" + Data.daily[i].temp.min;
+                nightCal.innerText = "Min " + Data.daily[i].temp.min + "°C";
 
                 div.append(p, img, dayCal, nightCal);
 

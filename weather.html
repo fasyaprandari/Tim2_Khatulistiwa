@@ -8,8 +8,8 @@
   <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
   <link rel="stylesheet" href="css/w.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -47,82 +47,85 @@
 
     <br>
 
-    <div class="container">
+    <div class="container" style="display: flex; flex-direction: column; margin-bottom: 2rem;">
       <br>
-      <div id="mainContainer">
-        <div id="right">
-          <div id="rightOne">
-            <div id="loc">
-              <i id="log" class="fas fa-map-marker-alt"></i>
-              <p id="cityName">Jakarta</p>
-            </div>
-            <div> <i class="fas fa-cloud-sun-rain"></i></div>
-            <div id="sel"><span id="temp">32</span>&#176;C</div>
-            <!-- <div id="Rightdate" class="Rightdate">Thursday, 15 June </div> -->
-          </div>
-        </div>
-
-        <div id="left">
+      <div class="container">
+        <div class="input-container">
           <input type="text" id="city" placeholder="Please Enter a name city">
           <button id="Search" onclick="getWeather()">Search</button>
-
-          <div id="leftOne">
-            <div id="timeDiv">
-              <div id="time" class="time">
-                10:35 <span id="ampm">AM</span>
+        </div>
+        <div id="mainContainer">
+          <div id="right">
+            <div id="rightOne">
+              <div id="loc">
+                <i id="log" class="fas fa-map-marker-alt"></i>
+                <p id="cityName">Jakarta</p>
               </div>
-              <div id="date" class="date">
-                Thursday, 15 July
-              </div>
-            </div>
-
-            <div id="btns">
-              <button id="night" onclick="nightTheme()">Night</button>
-              <button id="day" onclick="dayTheme()">Day</button>
+              <div> <i class="fas fa-cloud-sun-rain"></i></div>
+              <div id="sel"><span id="temp">32</span>&#176;C</div>
+              <!-- <div id="Rightdate" class="Rightdate">Thursday, 15 June </div> -->
             </div>
           </div>
-
-          <br><br>
-
-          <div id="days">
-            <div>
-              <p>Sun</p>
-              <i class="fas fa-cloud-sun-rain"></i>
-              <div>Max-33&#176;C</div>
-              <div>Min-23&#176;C</div>
+  
+          <div id="left">
+  
+            <div id="leftOne">
+              <div id="timeDiv">
+                <div id="time" class="time">
+                  10:35 <span id="ampm">AM</span>
+                </div>
+                <div id="date" class="date">
+                  Thursday, 15 July
+                </div>
+              </div>
+  
+              <div id="btns">
+                <button id="night" onclick="nightTheme()">Night</button>
+                <button id="day" onclick="dayTheme()">Day</button>
+              </div>
             </div>
-            <div>
-              <p>Mon</p>
-              <i class="fas fa-bolt"></i>
-              <div>Max-34&#176;C</div>
-              <div>Min-23&#176;C</div>
+    
+            <div id="days">
+              <div>
+                <p>Sun</p>
+                <i class="fas fa-cloud-sun-rain"></i>
+                <div>Max-33&#176;C</div>
+                <div>Min-23&#176;C</div>
+              </div>
+              <div>
+                <p>Mon</p>
+                <i class="fas fa-bolt"></i>
+                <div>Max-34&#176;C</div>
+                <div>Min-23&#176;C</div>
+              </div>
+              <div>
+                <p>Tue</p>
+                <i class="fas fa-cloud-moon"></i>
+                <div>Max-29&#176;C</div>
+                <div>Min-23&#176;C</div>
+              </div>
+              <div>
+                <p>Wed</p>
+                <i class="fas fa-cloud"></i>
+                <div>Max-36&#176;C</div>
+                <div>Min-25&#176;C</div>
+              </div>
+              <div>
+                <p>Thur</p>
+                <i class="fas fa-cloud-sun-rain"></i>
+                <div>Max-32&#176;C</div>
+                <div>Min-29&#176;C</div>
+              </div>
+              <div>
+                <p>Fri</p>
+                <i class="fas fa-bolt"></i>
+                <div>Max-33&#176;C</div>
+                <div>Min-30&#176;C</div>
+              </div>
+  
             </div>
-            <div>
-              <p>Tue</p>
-              <i class="fas fa-cloud-moon"></i>
-              <div>Max-29&#176;C</div>
-              <div>Min-23&#176;C</div>
-            </div>
-            <div>
-              <p>Wed</p>
-              <i class="fas fa-cloud"></i>
-              <div>Max-36&#176;C</div>
-              <div>Min-25&#176;C</div>
-            </div>
-            <div>
-              <p>Thur</p>
-              <i class="fas fa-cloud-sun-rain"></i>
-              <div>Max-32&#176;C</div>
-              <div>Min-29&#176;C</div>
-            </div>
-            <div>
-              <p>Fri</p>
-              <i class="fas fa-bolt"></i>
-              <div>Max-33&#176;C</div>
-              <div>Min-30&#176;C</div>
-            </div>
-
-          </div>
+          
+          </div>  
         </div>
       </div>
       <br>

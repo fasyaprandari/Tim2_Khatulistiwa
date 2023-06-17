@@ -27,6 +27,14 @@ body {
   justify-content: center;
 }
 
+.section-flex> div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .image-container>.img {
   width: 100%;
   height: 100%;
@@ -251,18 +259,24 @@ a:link {
 }
 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 #mainContainer {
   width: 75%;
-  height: 600px;
+  height: auto;
   background-color: #fff;
   margin: auto;
   margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.input-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 #left {
@@ -274,8 +288,6 @@ a:link {
   margin-left: 10px;
   width: 400px;
   height: 30px;
-  margin-top: 50px;
-  margin-bottom: 10px;
   border-radius: 10px;
   font-weight: lighter;
   padding-left: 20px;
@@ -290,6 +302,7 @@ a:link {
   background-color: #1a395c;
   color: white;
   margin-left: 10px;
+  max-height: 20px;
 }
 
 #leftOne {
@@ -300,11 +313,6 @@ a:link {
   margin: auto;
   height: 100px;
   margin-top: 25px;
-}
-
-#leftOne>div:first-child {
-  width: 40%;
-  height: 80%;
 }
 
 
@@ -318,7 +326,7 @@ a:link {
 }
 
 #time {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 900;
 }
 
@@ -357,23 +365,26 @@ a:link {
 
 #days {
   width: 100%;
-  height: 150px;
+  height: 100%;
   display: flex;
   margin-top: 30px;
   justify-content: center;
   align-items: center;
   background-color: rgb(53, 46, 46);
   border-radius: 10px;
+  padding: 0.5rem;
+  gap: 0.25rem;
 }
 
 #days>div {
-  width: 15%;
-  height: 90%;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  margin-right: 3px;
   border: .5px solid rgb(97, 94, 94);
   background-color: rgb(65, 64, 64);
   border-radius: 5px;
+  padding: 0.025rem;
 }
 
 #icon {
@@ -389,9 +400,7 @@ a:link {
 }
 
 #days div img {
-  margin-top: -10px;
-  width: 60px;
-  height: 60px;
+  object-fit: contain;
 }
 
 #days div {
@@ -415,7 +424,6 @@ a:link {
 }
 
 #cals {
-  margin-top: -12px;
   color: white;
 }
 
@@ -426,7 +434,7 @@ a:link {
 #rightOne {
   width: 80%;
   height: 300px;
-  margin: 145px 30px 0 30px;
+  /* margin: 145px 30px 0 30px; */
   border-radius: 10px;
   background-color: #1a395c;
   color: white;
