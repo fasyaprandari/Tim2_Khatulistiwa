@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/h.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Weather App Team 2</title>
+  </head>
+  <body>
+    <div class="body1">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <i class="ri-cloud-line"></i
+            ><a href="home.html"><span>Weather App</span></a>
+          </div>
+          <ul class="links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+          <a href="#" class="action_btn">Get Started</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+
+        <div class="dropdown_menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="weather.html">Weather</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="weather.html" class="action_btn">Get Started</a></li>
+        </div>
+      </header>
+
+      <main>
+        <section id="home">
+          <h1>Welcome</h1>
+          <p>Weather Application by Team 2 Khatulistiwa</p>
+        </section>
+      </main>
+    </div>
+    <div class="content">
+      <section class="Introduction-website">
+        <h1 class="f-judul">Welcome to Team 2's Weather Application</h1>
+      </section>
+      <section class="section-flex">
+        <br />
+        <div class="weather-logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsGHI2XgxMSJlfSUMGaAO8YKBMP6z8WE4lcA&usqp=CAU"
+            alt="Weather logo"
+            style="width: 130px; height: 130px"
+          />
+        </div>
+        <div class="explain-paragraph1">
+          <p>
+            Our weather application will provide you an accurate and real-time
+            weather data, including temperature, precipitation, humidity, wind
+            speed and direction, UV index, and more. So, you can plan your
+            activities and prepare for expected weather conditions!
+          </p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+          <h2 class="f-judul2">What can our weather application do for you?</h2>
+        </div>
+        <br />
+        <div class="thought-logo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/7829/7829928.png"
+            alt="thought logo"
+            style="width: 140px; height: 140px"
+          />
+        </div>
+        <div>
+          <ul class="list-kesatu">
+            <li>You can choose the location freely.</li>
+            <li>
+              You can find out the weather forecast from the location you're
+              looking for.
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+          <h2 class="f-judul3">
+            Which weather symbol is in your area right now?
+          </h2>
+        </div>
+        <div class="image-flex">
+          <div class="image-container">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/001/635/250/original/weather-icons-set-vector.jpg"
+              alt="Simbol"
+              style="width: 580px; height: 580px; margin-top: 0%"
+            />
+          </div>
+        </div>
+        <div>
+          <a href="weather.html">
+            <button class="first-button">Let's find out!</button>
+          </a>
+        </div>
+      </section>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const DropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        DropDownMenu.classList.toggle("open");
+        const isOpen = DropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+    <footer>
+      <div class="footer-bottom">
+        <p>Copyright 2023 by Team 2 for RevoU Kampus Merdeka Program</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+    <link rel="stylesheet" href="css/w.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Weather App Team 2</title>
+  </head>
+  <body>
+    <div class="body1">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <i class="ri-cloud-line"></i
+            ><a href="home.html"><span>Weather App</span></a>
+          </div>
+          <ul class="links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+          <a href="#" class="action_btn">Get Started</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+
+        <div class="dropdown_menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="weather.html">Weather</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="weather.html" class="action_btn">Get Started</a></li>
+        </div>
+      </header>
+      <br />
+      <div class="container">
+        <div class="content">
+          <section class="Introduction-website">
+            <h1 class="f-judul">Weather</h1>
+
+            <div class="d-flex justify-content-center h-100">
+              <div class="search">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Search your country"
+                  name=""
+                />
+                <a href="#" class="search-icon">
+                  <i class="fa fa-search"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+          <br />
+          <br />
+          <h3 class="negara">Jakarta, Indonesia - 09:30 AM</h3>
+
+          <div class="row">
+            <div class="col">
+              <div class="weather-card rain">
+                <div class="top">
+                  <div class="wrapper">
+                    <div class="mynav">
+                      <a href="javascript:;"
+                        ><span class="lnr lnr-chevron-left"></span
+                      ></a>
+                      <a href="javascript:;"
+                        ><span class="lnr lnr-cog"></span
+                      ></a>
+                    </div>
+                    <h1 class="heading">Rainy day</h1>
+                    <p class="temp">
+                      <span class="temp-value">16</span>
+                      <span class="deg">0</span>
+                      <a href="javascript:;"
+                        ><span class="temp-type">C</span></a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bawah -->
+          <br />
+          <h4>This week weather forecast</h4>
+          <div class="page-content page-container" id="page-content">
+            <div class="padding">
+              <div class="row container d-flex justify-content-center">
+                <div class="col-lg-8 grid-margin stretch-card">
+                  <div class="card card-weather">
+                    <div class="card-body">
+                      <div class="card-body p-0">
+                        <div class="d-flex weakly-weather">
+                          <div class="weakly-weather-item">
+                            <p class="mb-0">Sun</p>
+                            <i class="mdi mdi-weather-cloudy"></i>
+                            <p class="mb-0">30&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Mon</p>
+                            <i class="mdi mdi-weather-hail"></i>
+                            <p class="mb-0">31&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Tue</p>
+                            <i class="mdi mdi-weather-partlycloudy"></i>
+                            <p class="mb-0">28&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Wed</p>
+                            <i class="mdi mdi-weather-pouring"></i>
+                            <p class="mb-0">30&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Thu</p>
+                            <i class="mdi mdi-weather-pouring"></i>
+                            <p class="mb-0">29&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Fri</p>
+                            <i class="mdi mdi-weather-snowy-rainy"></i>
+                            <p class="mb-0">31&deg;</p>
+                          </div>
+                          <div class="weakly-weather-item">
+                            <p class="mb-1">Sat</p>
+                            <i class="mdi mdi-weather-snowy"></i>
+                            <p class="mb-0">32&deg;</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="section-flex">
+            <div>
+              <h2>Let's find out more!</h2>
+              <iframe
+                width="700"
+                height="345"
+                src="https://www.youtube.com/embed/RI6osTlcyFc"
+              >
+              </iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+      <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const DropDownMenu = document.querySelector(".dropdown_menu");
+
+        toggleBtn.onclick = function () {
+          DropDownMenu.classList.toggle("open");
+          const isOpen = DropDownMenu.classList.contains("open");
+
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+      </script>
+      <footer>
+        <div class="footer-bottom">
+          <p>Copyright 2023 by Team 2 for RevoU Kampus Merdeka Program</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,477 @@
+@import "index.css";
+
+body {
+  height: fit-content;
+  background-color: #000;
+  background: rgb(147, 176, 171);
+  background: linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background-color: white;
+  max-width: 900px;
+  min-height: 600px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.section-flex>.image-flex {
+  display: flex;
+  margin-top: 1px;
+  justify-content: center;
+}
+
+.image-container>.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.f-judul {
+  font-size: 75px;
+}
+
+.second-button {
+  background-color: rgb(255, 255, 131);
+  color: rgb(49, 49, 49);
+  box-shadow: 4px 4px 1px rgb(0, 0, 0, .2);
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  text-align: center;
+}
+
+.search {
+  height: 20px;
+  background-color: #fff;
+  padding: 10px;
+  margin: 20px;
+}
+
+.search-input {
+  color: blue;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  border-color: blue;
+  box-shadow: 0px 0px 0px;
+  border: 2px solid #f8c146;
+  border-radius: 10px;
+  float: left;
+}
+
+.search .search-input {
+  padding: 0 10px;
+  width: 740px;
+  caret-color: #536bf6;
+  font-size: 21px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear;
+  border-color: #f8c146;
+  margin: auto;
+}
+
+.search:hover>.search-icon {
+  background: #1A237E;
+  color: #fff;
+}
+
+.search-icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #536bf6;
+
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+.stretch-card>.card {
+  width: 100%;
+  min-width: 100%
+}
+
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+
+@media (max-width:991.98px) {
+  .padding {
+    padding: 1.5rem
+  }
+}
+
+@media (max-width:767.98px) {
+  .padding {
+    padding: 1rem
+  }
+}
+
+.padding {
+  padding: 1rem
+}
+
+.h4 {
+  font-weight: 100;
+}
+
+.grid-margin,
+.purchace-popup>div {
+  margin-bottom: 0px;
+}
+
+/* result */
+
+.weather-container {
+  padding: 25px 30px;
+  border-radius: 10px;
+  position: relative;
+  /* untuk menengahkan objek, tapi tidak berhasil */
+  /* text-align: center;
+  position: inline-block;
+  margin: auto; */
+}
+
+
+.desc {
+  color: #1e1a1a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.result {
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 10px;
+  width: 600px;
+  height: fit-content;
+  /* width: 350px; */
+  /* background-color: #d9e8fc; */
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(12, 66, 101, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(2.8px);
+  border: 1px solid rgba(12, 66, 101, 0.31);
+  padding: 2px;
+  margin: 20px auto;
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+#result h3 {
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 45;
+}
+
+/* LOGO */
+#result img {
+  margin-top: 50px;
+  width: 150px;
+  filter: drop-shadow(0 30px 60px rgba(3, 46, 87, 0.2));
+}
+
+#result h2 {
+  font-size: 64px;
+  margin: 4.8px 0 11px 0;
+  line-height: 0;
+  font-weight: 400;
+  color: #1d1717;
+}
+
+.temp-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.temp-container div {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 4.8px 16px;
+}
+
+.temp-container div:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.temp-container .title {
+  font-weight: 500;
+  font-size: 15px;
+  color: #0c0a0a;
+}
+
+.temp-container .temp {
+  font-weight: 300;
+  color: #191515;
+  font-size: 20px;
+}
+
+.message {
+  margin-top: 30px;
+  color: #171212;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#mainContainer {
+  width: 75%;
+  height: 600px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left {
+  width: 70%;
+  height: 100%;
+}
+
+#city {
+  margin-left: 10px;
+  width: 400px;
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  padding-left: 20px;
+  border: none;
+  border: 1px solid rgb(71, 71, 71);
+}
+
+#Search {
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1a395c;
+  color: white;
+  margin-left: 10px;
+}
+
+#leftOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 25px;
+}
+
+#leftOne>div:first-child {
+  width: 40%;
+  height: 80%;
+}
+
+
+#leftOne>div:last-child {
+  width: 20%;
+  height: 60%;
+}
+
+#timeDiv {
+  line-height: 40px;
+}
+
+#time {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+#ampm {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+#date {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+#right {
+  width: 300px;
+  height: 100%;
+}
+
+#day {
+  padding: 5px 12px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#night {
+  padding: 5px 8px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+
+}
+
+#days {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(53, 46, 46);
+  border-radius: 10px;
+}
+
+#days>div {
+  width: 15%;
+  height: 90%;
+  text-align: center;
+  margin-right: 3px;
+  border: .5px solid rgb(97, 94, 94);
+  background-color: rgb(65, 64, 64);
+  border-radius: 5px;
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+}
+
+#days div p {
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#days div img {
+  margin-top: -10px;
+  width: 60px;
+  height: 60px;
+}
+
+#days div {
+  color: white;
+}
+
+#days div i {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+}
+
+#wImg {
+  width: 150px;
+  height: 150px;
+  margin-top: -30px;
+}
+
+#curDay {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#cals {
+  margin-top: -12px;
+  color: white;
+}
+
+#Ncals {
+  color: white;
+}
+
+#rightOne {
+  width: 80%;
+  height: 300px;
+  margin: 145px 30px 0 30px;
+  border-radius: 10px;
+  background-color: #1a395c;
+  color: white;
+  text-align: center;
+}
+
+#loc {
+  display: flex;
+}
+
+#loc>p {
+  margin: 20px 0px 0px 5px;
+  color: white;
+  font-weight: 900;
+}
+
+#log {
+  font-size: 15px;
+  margin: 25px 0px 0px 20px;
+}
+
+#rightOne>div:nth-child(2) i {
+  font-size: 70px;
+  margin-top: 30px;
+
+}
+
+#temp {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: -38px;
+  font-size: 60px;
+}
+
+#sel {
+  font-size: 45px;
+  font-weight: 600;
+
+}
+
+#o {
+  font-size: 30px;
+}
+
+#Rightdate {
+  margin-top: -10px;
+  font-size: 20px;
+}

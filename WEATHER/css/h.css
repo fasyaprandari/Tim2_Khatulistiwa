@@ -1,0 +1,112 @@
+@import "index.css";
+
+.body1{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://www.hdwallpaperslife.com/wp-content/uploads/2017/11/cool_mountains_4k-HD.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* konten */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    background: rgb(147,176,171);
+    background: linear-gradient(360deg, rgba(147,176,171,1) 0%, rgba(13,37,59,1) 38%, rgba(8,4,12,1) 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    max-width: 1000px;
+    min-height: 100vh;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+
+}
+
+.section-flex > .image-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container > .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.f-judul {
+    font-size: 75px;
+    text-align: center;
+    line-height: 2.3cm;
+}
+
+.explain-paragraph1 {
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 1.5cm;
+    margin-left: 1.5cm;
+}
+
+.weather-logo {
+    float: right;
+    margin-right: 1.5cm;
+    margin-left: 1.5cm;
+}
+
+.thought-logo {
+    float: left;
+    margin-right: 1cm;
+    margin-left: 1.5cm;
+}
+
+.f-judul2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0%;
+    line-height: 1cm;
+}
+
+.f-judul3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0%;
+    line-height: 1cm;
+}
+
+.list-kesatu {
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 1cm;
+    margin-right: 1.5cm;
+    margin-left: 1cm;
+}
+
+button {
+    line-height: 1;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+}
+
+.first-button {
+    background-color: rgb(103, 126, 189);
+    color:white;
+    box-shadow: 4px 4px 1px rgb(0, 0, 0, .2);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    margin-bottom: 1cm;
+}
+

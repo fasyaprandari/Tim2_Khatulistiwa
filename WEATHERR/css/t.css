@@ -1,0 +1,115 @@
+@import "index.css";
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://www.hdwallpaperslife.com/wp-content/uploads/2017/11/cool_mountains_4k-HD.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.content {
+    max-width: 1000px;
+    min-height: 85vh;
+    background-color: white;
+    margin: auto;
+    border-radius: 25px;
+    padding-bottom: 1cm;
+}
+
+.f-judul {
+    padding-top: 1cm;
+    padding-bottom: 0.5cm;
+    font-size: 75px;
+    text-align: center;
+    line-height: 2.3cm;
+}
+
+.section-pictures {
+    display: flex;
+    justify-content: center;
+    margin-left: 1.2cm;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.section-pictures a {
+    vertical-align: top;
+    display: inline-block;
+    width: 190px;
+    text-align: center;
+    /* padding-left: 2cm;
+    padding-right: 2cm;
+    margin-bottom: 0.5cm; */
+}
+
+.caption {
+    display: block;
+    margin-left: 0.8cm;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding-right: 0.7cm;
+    color:black;
+}
+
+.border-box {    
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
+.border-box1 {    
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: none;
+    object-position: 45% 50%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
+.border-box2 {    
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    object-fit:none;
+    object-position: 50% 95%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
+.border-box3 {    
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    object-fit:none;
+    object-position: 45% 35%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
+.border-box4 {    
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    object-fit:none;
+    object-position: 50% 50%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
+.border-box5 {    
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    object-fit:none;
+    object-position: 50% 40%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+}
+
