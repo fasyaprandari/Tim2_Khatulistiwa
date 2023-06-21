@@ -1,4 +1,3 @@
-// khofifah
 let key = "ba98deab6ce9cd74af9735fb0625c520";
 let city = "Jakarta";
 let container = document.getElementById("container");
@@ -24,7 +23,6 @@ async function getWeather() {
   }
 
   let data = await res.json();
-  console.log(data);
   appendsData(data);
 }
 
@@ -38,7 +36,6 @@ function appendsData(data) {
   async function Wheather(lat, lon) {
     let daily = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=,hourly,minutely&units=metric&appid=${key}`);
     let dailyData = await daily.json();
-    console.log(dailyData);
     week(dailyData);
   }
 
@@ -51,7 +48,7 @@ function appendsData(data) {
         let loc = document.createElement("div");
         loc.id = "loc";
         let icon = document.createElement("i");
-        // icon.innerHTML = `<i id="log" class="fas fa-map-marker-alt"></i>`;
+        icon.innerHTML = `<i id="log" class="fas fa-map-marker-alt"></i>`;
         let pTag = document.createElement("p");
         pTag.innerText = data.name;
         pTag.id = "cityName";
@@ -98,9 +95,36 @@ function appendsData(data) {
   }
 }
 
-// fiqri
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+function getWeatherLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
 
+        fetch(weatherUrl)
+          .then(response => response.json())
+          .then(data => {
+            appendsData(data);  
+          })
+          .catch(error => {
+            console.log('Error:', error);
+          });
+      },
+      function (error) {
+        console.log('Error:', error);
+      }
+    );
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
+}
+
+const weatherButton = document.querySelector('#weather-button');
+weatherButton.addEventListener('click', getWeatherLocation);
+
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 setInterval(function () {
@@ -117,24 +141,16 @@ setInterval(function () {
   document.querySelector("#time").innerHTML = (hoursIn12HrsFormat < 10 ? '0' + hoursIn12HrsFormat : hoursIn12HrsFormat) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + `<span id="ampm">${ampm}</span>`;
 
   document.querySelector("#date").innerHTML = days[day] + ', ' + date + ' ' + months[month];
-  // document.querySelector("#Rightdate").innerHTML = days[day] + ', ' + date + ' ' + months[month];
 }, 1000);
 
-// finna
 function nightTheme() {
   document.getElementById("container").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
-  // document.getElementById("mainContainer").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
-  // document.getElementById("right").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
-  // document.getElementById("left").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
   document.getElementById("time").style.color = "white";
   document.getElementById("date").style.color = "white";
   document.getElementById("loc").style.color = "white";
   document.getElementById("temp").style.color = "white";
   document.getElementById("cityName").style.color = "white";
   document.getElementById("curDay").style.color = "white";
-  // document.getElementById("night").style.backgroundColor = "white";
-  // document.getElementById("day").style.backgroundColor = "white";
-  // document.getElementById("days").style.backgroundColor = "#1a395c";
   document.getElementById("days").style.opacity = ".9";
   document.getElementById("rightOne").style.opacity = ".9";
   document.getElementById("rightOne").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
@@ -146,18 +162,19 @@ function dayTheme() {
   
   document.getElementById("container").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
   document.getElementById("rightOne").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
-  // document.getElementById("right").style.backgroundColor = "white";
-  // document.getElementById("left").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
-  // document.getElementById("right").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
-  // document.getElementById("left").style.backgroundColor = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
   document.getElementById("time").style.color = "#1a395c";
   document.getElementById("date").style.color = "#1a395c";
   document.getElementById("loc").style.color = "#1a395c";
   document.getElementById("temp").style.color = "#1a395c";
   document.getElementById("cityName").style.color = "#1a395c";
   document.getElementById("curDay").style.color = "#1a395c";
-  // document.getElementById("night").style.backgroundColor = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
-  // document.getElementById("day").style.backgroundColor = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
-  // document.getElementById("days").style.backgroundColor = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
 }
 
+const time = new Date();
+const hour = time.getHours();
+
+if (hour >= 6 && hour < 18) {
+  dayTheme();
+} else {
+  nightTheme();
+}

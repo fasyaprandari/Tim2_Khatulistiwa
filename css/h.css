@@ -4,8 +4,10 @@
     height: 100vh;
     background-color: #000;
     background-image: url('https://i.postimg.cc/mgFzRjd7/cool-mountains-4k-HD-4.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 /* konten */
@@ -14,15 +16,16 @@ body {
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    background: rgb(147,176,171);
-    background: linear-gradient(360deg, rgba(147,176,171,1) 0%, rgba(13,37,59,1) 38%, rgba(8,4,12,1) 100%);
+    background-image: url('https://i.postimg.cc/mgFzRjd7/cool-mountains-4k-HD-4.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .content {
-    max-width: 1000px;
-    min-height: 100vh;
+    max-width: 850px;
+    height: 855px;
     background-color: white;
     margin: auto;
     padding: 20px;
@@ -42,50 +45,52 @@ body {
 }
 
 .f-judul {
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
-    line-height: 2.3cm;
+    line-height: 1.7cm;
 }
 
 .explain-paragraph1 {
-    font-size: 20px;
+    font-size: 17px;
     text-align: justify;
-    margin-right: 1.5cm;
-    margin-left: 1.5cm;
+    margin-right: 0.5cm;
+    margin-left: 0.5cm;
 }
 
 .weather-logo {
     float: right;
-    margin-right: 1.5cm;
-    margin-left: 1.5cm;
+    margin-right: 0.5cm;
+    margin-left: 0.5cm;
 }
 
 .thought-logo {
     float: left;
-    margin-right: 1cm;
+    margin-right: 0.5cm;
     margin-left: 1.5cm;
+    margin-top: 0cm;
 }
 
 .f-judul2 {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 0%;
     line-height: 1cm;
 }
 
 .f-judul3 {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 0%;
-    line-height: 1cm;
+    margin-top: 0.3cm;
+    line-height: 0.5cm;
 }
 
 .list-kesatu {
-    font-size: 20px;
+    font-size: 17px;
     text-align: justify;
-    margin-top: 1cm;
+    margin-top: 0.8cm;
     margin-right: 1.5cm;
-    margin-left: 1cm;
+    margin-left: 0.5cm;
 }
 
 button {
@@ -93,8 +98,8 @@ button {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 20px;
-    height: 40px;
+    font-size: 18px;
+    height: 35px;
     width: 150px;
 }
 
@@ -107,6 +112,54 @@ button {
     text-align: center;
     margin: auto;
     display: flex;
-    margin-bottom: 1cm;
+    margin-top: 0cm;
+}
+
+/* Scroll Button */
+html{
+    scroll-behavior: smooth;
+}
+.scroll-down{
+    height: 50px;
+    width: 30px;
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after{
+    top: 20%;
+    animation-delay: .3s;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
 }
 

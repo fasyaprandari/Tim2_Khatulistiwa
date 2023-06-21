@@ -1,22 +1,21 @@
 @import "index.css";
+
 body{
-    height: 100vh;
+    height: fit-content;
     background-color: #000;
     background-image: url('https://i.postimg.cc/mgFzRjd7/cool-mountains-4k-HD-4.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
 }
 
-
-
-
-
-.content {
+.container {
     max-width: 1000px;
     min-height: 85vh;
-    background-color: white;
     margin: auto;
     border-radius: 25px;
+    background: rgba(255,255,255, .30);
+    backdrop-filter: saturate(100%) blur(10px);
     padding-bottom: 1cm;
 }
 
@@ -26,6 +25,7 @@ body{
     font-size: 75px;
     text-align: center;
     line-height: 2.3cm;
+    color:white;
 }
 
 .section-pictures {
@@ -37,6 +37,7 @@ body{
     text-align: center;
     margin: auto;
     display: flex;
+    padding-top: 0.5cm;
 }
 
 .section-pictures a {
@@ -57,7 +58,7 @@ body{
     align-items: center;
     display: inline-block;
     padding-right: 0.7cm;
-    color:black;
+    color:white;
 }
 
 .border-box {    
@@ -65,7 +66,10 @@ body{
     width: 150px;
     height: 150px;
     object-fit:cover;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #fff,
+    0 0 21px #789,
+    0 0 42px #000;
 }
 
 .border-box1 {    
@@ -74,7 +78,10 @@ body{
     height: 150px;
     object-fit: none;
     object-position: 45% 50%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #789,
+    0 0 21px #235,
+    0 0 42px #000;
 }
 
 .border-box2 {    
@@ -83,7 +90,10 @@ body{
     height:150px;
     object-fit:none;
     object-position: 50% 95%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #789,
+    0 0 21px #235,
+    0 0 42px #000;
 }
 
 .border-box3 {    
@@ -92,7 +102,10 @@ body{
     height:150px;
     object-fit:none;
     object-position: 45% 35%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #789,
+    0 0 21px #235,
+    0 0 42px #000;
 }
 
 .border-box4 {    
@@ -101,7 +114,10 @@ body{
     height:150px;
     object-fit:none;
     object-position: 50% 50%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #789,
+    0 0 21px #235,
+    0 0 42px #000;
 }
 
 .border-box5 {    
@@ -110,6 +126,9 @@ body{
     height:150px;
     object-fit:none;
     object-position: 50% 40%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 
+    0 0 1px #789,
+    0 0 21px #235,
+    0 0 42px #000;
 }
 
