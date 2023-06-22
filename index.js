@@ -156,10 +156,13 @@ function nightTheme() {
   document.getElementById("rightOne").style.backgroundImage = "linear-gradient(360deg, rgba(147, 176, 171, 1) 0%, rgba(13, 37, 59, 1) 54%, rgba(0, 2, 13, 1) 100%)";
   document.getElementById("Search").style.backgroundColor = "white";
   document.getElementById("Search").style.color = "#1a395c";
+  document.getElementById("night").style.backgroundColor = "#1a395c";
+  document.getElementById("night").style.color = "white";
+  document.getElementById("day").style.backgroundColor = "white";
+  document.getElementById("day").style.color = "#1a395c";
 }
 
 function dayTheme() {
-  
   document.getElementById("container").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
   document.getElementById("rightOne").style.backgroundImage = "linear-gradient(109.6deg, rgb(120, 212, 234) 11.2%, rgb(216, 226, 253) 72.1%)";
   document.getElementById("time").style.color = "#1a395c";
@@ -168,6 +171,12 @@ function dayTheme() {
   document.getElementById("temp").style.color = "#1a395c";
   document.getElementById("cityName").style.color = "#1a395c";
   document.getElementById("curDay").style.color = "#1a395c";
+  document.getElementById("days").style.opacity = ".9";
+  document.getElementById("rightOne").style.opacity = ".9";
+  document.getElementById("day").style.backgroundColor = "#1a395c";
+  document.getElementById("day").style.color = "white";
+  document.getElementById("night").style.backgroundColor = "white";
+  document.getElementById("night").style.color = "#1a395c";
 }
 
 const time = new Date();
